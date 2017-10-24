@@ -1,0 +1,75 @@
+// main: style.scss
+/*--------------------------------------------------------------
+4.0 Widgets
+--------------------------------------------------------------*/
+.widget-area .widget {
+	@include rem( 'margin-bottom', $base );
+	@include rem( 'padding-bottom', $base );
+	border-bottom: 1px solid $border;
+	@include rem( 'font-size', 13px );
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.widget-area .widget.widget_search {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.widget-area .widget-title {
+	@include rem( 'font-size', 20px );
+}
+
+.widget-area .widget ul,
+.widget-area .widget ol {
+	padding-left: 0px;
+	margin-bottom: 0px;
+}
+
+.widget-area .widget ul li {
+	list-style: none;
+	margin: 0px;
+	@include rem( 'padding', $base/3 0 );
+	ul {
+		@include rem( 'padding-top', $base/1.5 );
+		@include rem( 'padding-left', 0px );
+		li {
+			border-bottom: none;
+			border-top: 1px solid $border;
+			&:before {
+				content: "- ";
+			}
+		}
+		li:last-child {
+			padding-bottom: 0px;
+		}
+	}
+}
+.widget a{
+	text-decoration: none;
+	color: $text;
+	&:hover {
+		color: $secondary;
+	}
+}
+
+.widget-area .widget_categories li, .widget-area .widget_archive li, .widget-area .widget_meta li, .widget-area .widget_pages li {
+    float: left;
+    font-size: 12px;
+    margin-bottom: 0;
+    width: 50%;
+}
+
+/* Calendar Widget */
+#calendar_wrap caption {
+	@extend h3;
+	text-align: left;
+}
+
+.widget #calendar_wrap a {
+	color: $secondary;
+	&:hover {
+		text-decoration: underline;
+	}
+}

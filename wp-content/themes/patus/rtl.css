@@ -1,0 +1,39 @@
+/*
+Theme Name: Patus
+
+Adding support for language written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+http://codex.wordpress.org/Right_to_Left_Language_Support
+
+*/
+
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+.nav-social {
+	left: 20px;
+	top: 5px;
+	right: auto;
+}
+
+#site-navigation .menu li:first-child a, #site-navigation .nav-menu li:first-child a {
+	padding-left: 2.30769rem;
+	padding-left: 23px;
+	padding-right: 0px;
+}
+
+#site-navigation .menu .sub-menu li a {
+	text-align: right;
+	padding-right: 1.5rem;
+	padding-right: 15px;
+}
+
+.search-field {
+	padding: 10px 2% 10px 15% !important;
+	background: url("assets/images/search-icon.png") no-repeat scroll 10px center white;
+}

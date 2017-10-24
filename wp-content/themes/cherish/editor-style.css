@@ -1,0 +1,22 @@
+body {
+	margin:15px;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1;
+}
+
+a{
+	text-decoration:none; 
+}
+
+a:focus, 
+.site-title a:focus{
+	text-decoration:underline;
+	color:#ff3333;
+}
+
+
+img,
+object {
+	max-width: 100%;
+	height: auto;
+}

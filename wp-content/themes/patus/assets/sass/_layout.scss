@@ -1,0 +1,66 @@
+// main: style.scss
+.container,
+.site-content {
+	max-width: $width;
+	margin: 0 auto;
+	@include rem('padding', 0px $base);
+	@extend .clear;
+}
+
+.site-content {
+	@include rem( 'padding-bottom', $base*2 );
+}
+
+#primary {
+	margin-bottom: $base*2;
+	padding-bottom: $base*2;
+	border-bottom: 1px solid $border;
+}
+
+@include for(medium-screens) {
+	#primary {
+		margin-bottom: 0;
+		padding-bottom: 0px;
+		border-bottom: none;
+	}
+}
+
+@include for(medium-screens) {
+	.has-sidebar #primary {
+		float: left;
+		width: percentage( ( ( $column*8 + $gutter*8 ) - 2 ) / $grid ); // 630px;
+	}
+
+	.has-sidebar #secondary {
+		float: right;
+		width: percentage( ( ( $column*3 + $gutter*3 ) - 2 ) / $grid ); // 300px;
+	}
+
+	.left-sidebar #primary {
+		float: right;
+	}
+
+	.left-sidebar #secondary {
+		float: left;
+	}
+}
+
+#secondary .widget {
+	width: 100%;
+}
+@include for(small-screens) {
+	#secondary .widget {
+		width: percentage( ( ( $grid - $gutter*2 ) / 2 ) / $grid );
+		float: left;
+		margin-right: percentage($gutter*2 / $grid);
+	}
+	#secondary .widget:nth-child(2n+0) {
+		clear: right;
+		margin-right: 0px;
+	}
+}
+@include for(medium-screens) {
+	#secondary .widget {
+		width: 100%;
+	}
+}

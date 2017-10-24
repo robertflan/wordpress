@@ -1,0 +1,61 @@
+/*
+Theme Name: Patus
+Theme URI: http://www.famethemes.com/themes/patus
+Author: FameThemes
+Author URI: http://www.famethemes.com
+Description: Patus is a Personal Blogging Theme for WordPress and an effortlessly tool for publishers of all kind, cherished for its flexibility, clean layouts and speed. It’s totally responsive so it adapts to your style as well as the device it’s viewed on.
+Version: 1.0.8
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: patus
+Tags:two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Reset
+2.0 Document
+3.0 Layout
+4.0 Elements
+5.0 Posts
+6.0 Widgets
+7.0 Supports
+
+--------------------------------------------------------------*/
+@import "variables";
+
+/*--------------------------------------------------------------
+1.0 Reset
+--------------------------------------------------------------*/
+@import "reset";
+
+/*--------------------------------------------------------------
+2.0 Document Setup
+--------------------------------------------------------------*/
+@import "document";
+
+/*--------------------------------------------------------------
+3.0 Layout
+--------------------------------------------------------------*/
+@import "layout";
+
+/*--------------------------------------------------------------
+4.0 Elements
+--------------------------------------------------------------*/
+@import "elements";
+
+/*--------------------------------------------------------------
+5.0 Posts
+--------------------------------------------------------------*/
+@import "posts";
+
+/*--------------------------------------------------------------
+6.0 Widgets
+--------------------------------------------------------------*/
+@import "widgets";
+
+/*--------------------------------------------------------------
+7.0 Support
+--------------------------------------------------------------*/
+@import "support";

@@ -1,0 +1,1239 @@
+/*
+Theme Name: Cherish
+Theme URI:
+Author: Carolina Nymark
+Author URI: http://wptema.se
+Description: Cherish is an accessible, full width, responsive theme with a fixed top menu. It has 3 widget areas in the footer and you can change the background color of your posts. Edit or disable your Call to Action area in the customizer, where you can also change colors, hide your post meta and upload your own logo.
+Version: 1.3
+Tags: custom-colors, threaded-comments, custom-menu, translation-ready, custom-header, flexible-header, one-column, editor-style, featured-images, responsive-layout, accessibility-ready, blog
+Text Domain: cherish
+License: MIT License
+License URI: http://opensource.org/licenses/MIT
+*/
+
+*,
+*:before,
+*:after { /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+	-webkit-box-sizing: border-box; /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
+	-moz-box-sizing:    border-box; /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
+	box-sizing:         border-box;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+body {	
+	margin:0;
+	padding:0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.5;
+	color:#000;
+	background:#fff;
+}
+
+a{
+	color:#000;
+	text-decoration:none;
+}
+
+a:focus{
+	transition: all 0s ease;
+	outline-offset: 4px;
+}
+a:active, 
+a:hover{
+	color:#3670A9;
+}
+ 
+table{margin:4px 4px 10px 4px; border-collapse:collapse;}
+td, th{border:1px solid #666666; padding:6px;}
+
+#wrapper {
+	margin: 0 auto;
+	width: 100%;
+	clear: both;
+	padding: 0;
+	position: relative;
+}
+
+/* =Header
+-------------------------------------------------------------- */
+#header{
+	margin: 0;  
+	padding: 0;
+	width: 100%;
+	text-align: center;
+	display:inline-block;
+	vertical-align: top;
+}
+
+.custom-logo-link{
+	margin: 1.5em auto 0 auto;
+	display: inline-block;
+	border: 1px solid transparent;
+	border-radius:3px;
+	padding: 4px 4px 0 4px;
+	transition: all 1.1s ease;
+}
+
+.custom-logo-link:hover {
+	transition: all 1.1s ease;
+	border: 1px solid #000;
+}
+
+.custom-logo-link:after {
+	display: none;
+}
+
+.site-title {
+	font-size: 5.5em;
+	margin: 1.2em 0 0 0;
+	font-weight: bold;
+	font-family: 'Lily Script One', serif;
+	letter-spacing: 3px; 
+}
+
+.wp-custom-logo .site-title{ margin: 0.2em 0 0 0; }
+
+.site-description {
+	font-size: 2em;
+	font-weight: bold;
+	margin:0 0 2em 0;
+	padding:0;
+	font-family: 'Open Sans Condensed', serif;
+}
+
+#action{
+	width: 45%; 
+	margin: 20px auto 0 auto;
+	padding: 1em;
+	font-size: 1.6em;
+	font-weight: bold;
+	font-family: 'Open Sans Condensed', sans-serif;
+	background: #fff;
+	border-radius: 8px;
+}
+
+/* Keep posts and stickies in place if there is a sidebar: */
+.container{ 
+	width:100%;
+	clear:both;
+	margin:0 auto;
+	padding:0;
+	float:left;
+	position:relative;
+	background: #fff; /*#99b0ca;*/
+}
+
+/* =Content
+-------------------------------------------------------------- */
+
+.post,
+.type-page,
+.type-attachment,
+.type-forum{
+	width: 80%;
+	padding:0;
+	margin: 0 auto;
+	font-family: Verdana, Georgia, serif;
+	overflow: hidden;
+}
+
+/* Stickies
+.sticky{
+	padding-bottom: 1em;
+	border-bottom: none;
+}
+*/
+
+.entry-header{
+	text-align:center;
+}
+
+.post-title,
+.archive-title{
+	display: inline-block;
+	font-size: 4em;
+	font-family: 'Lily Script One', serif;
+	margin: 0.5em 0 0.5em 0;
+	letter-spacing: 3px;
+}
+
+.post-title a:after {    
+	background: none repeat scroll 0 0 transparent;
+	content: "";
+	display: block;
+	height: 2px;
+	background: #000;
+	margin: -20px auto 0;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 100%;
+}
+
+.post-title a:hover:after { 
+	width: 80%;
+	background: #3670A9;
+}
+
+.view_pots_by{
+	display: block;
+	font-size: 2em;
+	margin: 0 auto;
+	padding: 0;
+	clear: both;
+	font-family: 'Lily Script One', serif;
+	text-align: center;
+}
+
+.meta {
+	clear: both;
+	width: 100%;
+	margin: 2em auto 1em auto;
+	padding: 1em;
+	font-size: 0.9em;
+	text-align: center;
+	border-top:1px solid #eeeeee;
+}
+
+.meta p{
+	margin-bottom: 1.5em;
+}
+
+.meta a{
+	text-decoration:underline;
+}
+
+.meta a:hover,
+.meta a:focus{
+	text-decoration:none;
+}
+
+.divider{
+	background: url(images/cherish-black.png) no-repeat;
+	width: 59px;
+	height: 57px;
+	padding: 0;
+	display: inline-block;
+	position: relative;
+}
+
+.divider:before,
+.divider:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-top: 2px solid #000;
+  top: 50%;
+  width:600px;
+}
+
+.divider:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.divider:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.single-post .meta{
+	font-size: 1em;
+}
+
+.single-post .post-title, 
+.page .post-title, 
+.attachment .post-title{
+	margin-top: 1em;
+}
+
+.attachment_nav_clear{
+	float: right; 
+	clear: both; 
+	margin: 4px;
+}
+
+.fullimg{
+	width: 100%; 
+	float: left; 
+	clear: both; 
+	margin: 6px;
+}
+
+/*author info
+-------------------------------------------------------------- */
+.author-info {
+	clear: both;
+	font-size: 1em;
+	overflow: hidden;
+	min-height: 45px;
+	margin: 0 auto;
+	padding: 1em;
+	width: 75%;
+}
+.author-info .author-link{
+	padding-top: 6px;
+}
+
+.author-info .author-avatar {
+	float: left;
+	height: 60px;
+	width: 60px;
+	margin: 10px;
+}
+
+.author-info .author-description {
+	float: left;
+	margin: 10px;
+	font-size: 1em;
+}
+
+.author-info h2 {
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 0;
+}
+
+.sticky img{
+	margin: 0 auto;
+}
+
+/* Navigation 
+----------------------------------------*/
+.posts-navigation{
+	width: 80%; 
+	margin: 0 auto;
+}
+
+.more-link {
+	clear: both;
+	padding-top: 3px;
+	font-family: 'Lily Script One', serif;
+	font-size: 1.5em;
+}
+
+.page-link {
+	padding: 1em 0 1em 0;
+	font-family: 'Lily Script One', serif;
+	font-size: 1.5em;
+}
+
+.nav-previous,
+.nav-next{
+	font-family: 'Lily Script One', serif;
+	font-size: 1.5em;
+	min-width: 170px;
+	padding: 6px;
+	min-height: 15px;
+	margin: 1em 0 1em 0;
+	word-break: break-all;
+}
+
+.nav-next{
+	float: right;
+}
+.nav-previous{
+	float: left;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+@media \0screen {
+  img, object{
+  	width: auto; /* for ie 8 */
+  }
+}
+
+img,
+object {
+     max-width: 100%;
+	 height: auto;
+}
+
+a img {
+	padding: 4px;
+}
+
+a:hover img,
+a:focus img{
+	padding: 0; 
+	border: 4px solid #000;
+}
+
+p img {
+	margin: 0.5em;
+}
+
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.widget-area img {
+	max-width: 100%; 
+	height: auto;
+}
+
+.attachment-thumbnail{}
+.type-attachment .attachment-thumbnail{
+	margin: 8px;
+}
+
+img.alignleft, .wp-caption.alignleft {
+	margin-right: 1em;
+}
+img.alignright, .wp-caption.alignright {
+	margin-left: 1em;
+}
+.wp-caption {
+	padding: 5px;
+	text-align: center;
+}
+.wp-caption.alignnone {
+	max-width: 100%; 
+	height: auto;
+}
+.wp-caption img {
+	margin: 5px;
+}
+
+.wp-caption, .wp-caption-text {
+	font-size: 0.9em;
+}
+
+.gallery-caption {}
+
+.wp-smiley {
+	margin: 0;
+}
+
+object{
+	margin: 15px;
+}
+
+blockquote{
+	border-left: 3px solid #000; 
+	padding: 5px 0 5px 10px;
+}
+
+/* =Comments
+-------------------------------------------------------------- */
+#comments {
+	width: 100%;
+	padding: 1.5em 0 0 0;
+	margin: 0;
+	clear: both;
+}
+
+h2#comments-title{
+	font-family: 'Lily Script One', serif;
+	font-size: 2em;
+	text-align: center;
+}
+
+.comment-reply-title{
+	font-family: 'Lily Script One', serif;
+	font-size: 2em;
+}
+ 
+.paged-comments{
+	font-family: 'Lily Script One', serif;
+	font-size: 1.5em;
+}
+
+
+#comments .navigation {
+	padding: 0 0 1em 0;
+	display: inline-block;
+	width: 100%;
+}
+
+.commentlist {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.commentlist .children {
+	list-style: none;
+	margin: 0;
+}
+
+.commentlist .children .comment-body{}
+
+.comment-body{
+	font-size: 1.2em;
+	padding: 1em;
+	min-height: 5px;
+	margin-bottom: 4px;
+	overflow: hidden;
+	border-bottom: 1px solid #eee;
+}
+
+.comment-body p {
+	margin: 0;
+	padding: 0;
+}
+
+.comment-meta{
+	font-size: 0.6em;
+	margin-left: 64px;
+}
+.comment-author {
+	margin: 0;
+	padding: 0;
+	font-weight: bold; 
+	font-size: 1em;
+	min-height: 50px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.comment-author .avatar{
+	padding: 7px;
+	border-radius: 32px;
+	border: 2px solid #333;
+	margin-bottom: -20px;
+}
+
+.avataroff{
+	padding: 7px;
+	padding-left: 11px;
+	padding-right :11px;
+	margin-top: 8px;
+	margin-bottom: -20px;
+	border-radius: 32px;
+	border: 2px solid #333;
+	vertical-align: middle;
+}
+
+.comment-author h3{
+	margin-top: -35px; 
+	margin-left :64px; 
+	font-size: 1em;
+}
+.comment-edit-link{
+	font-size: .9em;
+}
+
+/*
+.bypostauthor .comment-author {}
+.bypostauthor .comment-body {}
+*/
+.comment-form-comment label {margin-right:6px;}
+
+.reply {
+	float:right;
+}
+
+.children li.depth-5 .reply{
+	visibility:hidden;
+}
+
+.nopassword, .nocomments {
+	display: none;
+}
+
+/* Comments form
+-------------------------------------------------------------- */
+
+input[type="submit"], 
+input[type="text"],  
+input[type="password"], 
+input[type="email"],
+select{
+	margin:3px;
+	padding:8px;
+	height:35px;
+		
+}
+input:hover, select:hover{
+	outline:#000000 dotted thin;
+}
+
+#respond {
+	width:70%;
+	margin-bottom:30px;
+}
+
+#cancel-comment-reply-link{
+	font-size:.9em;
+	font-weight:normal;
+	margin-left:10px;
+}
+
+#respond p{
+	margin:0;
+}
+#respond .logged-in-as{
+	padding-bottom:6px;
+	font-size:.9em;
+}
+#respond .logged-in-as a{
+	text-decoration:underline;
+}
+
+#respond .comment-notes{
+	font-size:12px;
+	margin-bottom: 1.9em;
+}
+#respond .required {
+	font-weight: bold;
+}
+#respond label {}
+
+#respond input {
+	margin:9px;
+}
+
+.comment-form-comment label{}
+
+#respond textarea {
+	padding:6px;
+	width:100%;
+	float:left;
+	clear:both;
+}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+	width:50%;
+}
+
+.comment-form-author  input,
+.comment-form-email  input,
+.comment-form-url  input{
+	width:100%;
+	clear:both;
+}
+
+#respond .form-allowed-tags {
+	margin-top:14px;
+	margin-bottom:14px;
+	font-size:.9em;
+	float:left;
+	clear:both;
+}
+
+#respond .form-submit {
+	margin: 12px 0;
+}
+#respond .form-submit input {
+	font-size: .9em; 
+	width: auto;
+}
+
+/* =Footer
+-------------------------------------------------------------- */
+#footer {
+	margin: 1em auto 0 auto ;
+	width: 80%;
+	background: #fff;
+	border-top:1px solid #eeeeee;
+	clear:both;
+	padding-top:1em;
+	text-align:center;
+	overflow: hidden;
+}
+
+.footer-credit{
+	width: 80%; 
+	margin: 1em auto 2em auto;
+	padding-top:1.2em;
+	clear: both; 
+	font-size: 0.7em; 
+	font-weight: bold;
+	text-align:center;
+}
+
+/* =Widgets
+-------------------------------------------------------------- */
+.widget_wrap{
+	width: 100%; 
+	margin: 0 auto; 
+	clear:both;
+	display:inline-block;
+}
+
+.footer_widget_1, 
+.footer_widget_2, 
+.footer_widget_3{
+	float: left; 
+	width: 33.33%; 
+	padding: 0;
+}
+
+.widget{
+	list-style: none;
+	position: relative;
+	float: left;
+	margin: 0 0 1.5em 0;
+	padding: 0;
+	width: 100%;
+	text-align: left;
+}
+
+.widgettitle{
+	margin-bottom: 0.3em;
+	font-weight: bold;
+	font-family: 'Lily Script One', serif;
+	font-size: 1.5em;
+}
+
+.widget ul{
+	padding:0;
+	margin:0;
+	float:left;
+	width:100%;
+}
+
+.widget ul li{
+	list-style: none;
+	font-weight: normal;
+	margin-left: 9px;
+	margin-top: 6px;
+	margin-bottom: 9px;
+	padding: 0;
+	text-align: left;
+}
+
+#calendar_wrap{
+	padding-top: 5px;
+	font-size: .9em;
+}
+
+#wp-calendar {
+	font-weight: normal;
+	padding: 5px;
+}
+
+.widget a {
+	text-decoration: underline;
+}
+
+.widget a:hover,
+.widget a:focus {
+	text-decoration: none;
+}
+
+#wp-calendar caption {
+	font-family: 'Lily Script One', serif;
+	font-size:18px;
+	margin-bottom:8px;
+}
+
+.tagcloud{
+	padding:10px;
+}
+
+.textwidget {
+	padding:10px;
+	overflow:hidden;
+}
+
+.widget_rss ul li {margin-bottom:25px; width:97%;}
+.rssSummary{width:90%;}
+.rss-date{width:90%; float:left; clear:both; margin-top:6px; font-size:0.9em;}
+
+select {
+    max-width: 150px !important;
+    overflow: hidden;
+}
+option {
+    max-width: 120px !important;
+    overflow: hidden;
+}
+
+/* Alignment 
+-------------------------------------------------------------- */
+.alignleft {
+	display: inline;
+	float: left;
+}
+.alignright {
+	display: inline;
+	float: right;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 1.4rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}	
+
+/*!
+ *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg'), url('fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ font-size: 16px;
+}
+
+.fa-big{
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ font-size: 32px;
+}
+
+.reply-link:before {
+	content: "\f112";
+}
+
+.avataroff:before{ 
+	content: "\f007";
+}
+
+.fa-angle-up:before {
+  content: "\f106";
+	float:right;
+	position:absolute;
+	right:12px;
+	bottom:12px;
+}	
+
+/*bbPress*/
+#bbpress-forums{
+	width:100%; 
+	margin:0 
+	auto;
+}
+
+#bbpress-forums  fieldset.bbp-form legend{
+	margin-top:4px;
+	margin-bottom:15px;
+	font-weight:bold;
+	font-family: 'Lily Script One', serif;
+	font-size:2.5em;
+	padding:0;
+	width:100%;
+}
+
+
+#bbpress-forums #bbp-user-wrapper{
+	width:70%; 
+	margin:0 auto; 
+	float:none; 
+	clear:both;
+}
+
+#bbpress-forums #bbp-single-user-details #bbp-user-navigation li.current{
+	background:#ffffff;
+	opacity:1;
+}
+
+
+#bbpress-forums a,
+#bbpress-forums #bbp-single-user-details #bbp-user-navigation li a,
+#bbpress-forums a.bbp-reply-permalink,
+#bbpress-forums span.bbp-admin-links a,
+#bbpress-forums a .bbp-topic-reply-link {
+	color: #000; 
+	text-decoration: underline;
+}
+
+#bbpress-forums #bbp-single-user-details #bbp-user-navigation{
+	margin-bottom: 1.5em;
+}
+
+#bbpress-forums div.bbp-reply-content code{
+	padding: 8px;
+}
+
+#bbpress-forums .forum-titles{
+	line-height: 22px;
+}
+
+#bbpress-forums fieldset.bbp-form {
+	border: none; 
+	margin: 0; 
+	padding: 0;
+}
+
+#bbpress-forums fieldset.bbp-form fieldset legend{
+	font-size: 1.8em;
+}
+
+
+.bbp-search #bbpress-forums,
+.reply-edit #bbpress-forums,
+.single-topic #bbpress-forums, 
+.topic-tag-edit #bbpress-forums, 
+.topic-tag #bbpress-forums {
+	width: 70%; 
+	clear: both;
+}
+
+.bbpress .page-link{
+	width: 70%; 
+	margin: 0 auto; 
+	padding-top: 110px; 
+	float: none; 
+	clear: both;
+}
+
+.topic-tag-edit #bbpress-forums fieldset.bbp-form{
+	margin-bottom: 20px;
+}
+
+
+div.bbp-breadcrumb{
+	display: block;
+	line-height: 2.5em;
+	margin-right: 0.7em;
+	margin-left:0.7em;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+#bbpress-forums .status-closed a,
+#bbpress-forums .status-closed {
+	color: #000;
+}
+#bbpress-forums p.bbp-topic-meta img.avatar,
+#bbpress-forums ul.bbp-reply-revision-log img.avatar, 
+#bbpress-forums ul.bbp-topic-revision-log img.avatar, 
+#bbpress-forums div.bbp-template-notice img.avatar, 
+#bbpress-forums .widget_display_topics img.avatar, 
+#bbpress-forums .widget_display_replies img.avatar
+.bbp-author-avatar{
+	display: none;
+}
+
+.bbp-pagination{
+	font-weight: bold;
+}
+
+.bbp-breadcrumb-sep{}
+.subscription-toggle{
+	padding: 10px; 
+	background: #fff; 
+	float: right;
+}
+
+ul .type-forum{
+	width: 100%;
+}
+
+/*.li.bbp-forum-info, li.bbp-topic-title{width:80%;}*/
+div.bbp-submit-wrapper{
+	float: left;
+}
+
+.bbp-body{
+	background: #fff;
+}
+
+
+/*From deejay*/
+/*--------------------------------------------------------------
+## Top Navigation bar
+--------------------------------------------------------------*/
+
+.main-navigation {
+	margin: 0 auto;
+	padding: 0.8em 0.8em 0 0.8em;
+	font-size: 0.95em;
+	line-height: 1em;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	color: #000;
+	background: #fff;
+	text-align: center;
+	border-bottom:1px solid #eeeeee;
+}
+
+.main-navigation a:after {    
+	background: none repeat scroll 0 0 transparent;
+	content: "";
+	display: block;
+	height: 2px;
+	background: #000;
+	margin: 3px auto 0;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 100%;
+}
+
+.main-navigation a:hover:after { 
+	width: 80%;
+	background: #3670A9;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus{
+	color: #3670A9;
+}
+
+.main-navigation ul {	
+	list-style: none;
+	margin: 0 auto;
+	padding:0;
+	width: 80%;
+	display: inline-block;
+}
+
+.main-navigation li {
+	float: left;
+	position: relative;
+	margin: 0px;
+    text-align: left;
+    padding: 0 0.8em 0 0.8em;
+}
+
+.main-navigation a {
+    text-decoration:none;
+    display: inline-block;
+	width: auto;
+	padding-bottom:10px;
+}
+
+/*first sub-menu*/
+.main-navigation ul ul {
+	position: absolute;
+	left: -1em;
+	display: block;
+	margin-top: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	z-index: 999; 
+	font-size: 1em;
+	line-height: 1.2em;
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+	padding:0;
+}
+
+.main-navigation ul ul li{
+	padding: 14px 14px 14px 2em;
+	display: inline-block;
+	width: 100%;
+	min-width: 200px;
+	background: #fff;
+	border-bottom: 1px solid #eee;
+	box-sizing: border-box;
+}
+
+.main-navigation ul ul li a{
+	padding:0;
+}
+
+
+.main-navigation ul ul li:hover{
+	box-shadow: inset 0 0 150px rgba(0,0,0, 0.01);
+	background: #fff;
+	transition: all 1.1s ease;
+}
+
+.main-navigation ul ul ul{
+	position: absolute;
+	left: 100%;
+	top: 0;
+	margin: 0;
+	display: block;
+	clip: rect(1px, 1px, 1px, 1px);
+	z-index: 999; 
+	font-size: 1em;
+	line-height: 1.2em;
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+	border-left: 1px solid #eee;
+}
+
+.main-navigation ul ul > :last-child {
+	border-bottom: none;
+}
+
+.main-navigation li:hover > ul,
+.keyboard-dropdown {
+	clip: auto !important;
+}
+
+#mobile-menu-toggle {
+	display: none;
+}
+
+
+@media screen and (max-width: 782px) {
+
+	#mobile-menu-toggle {
+		cursor: pointer; 
+		display: inline-block;
+		padding: 10px;
+		margin-bottom: 0.8em;
+		border: 2px solid #aeaeae;
+		border-radius: 2px;
+		box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+		background: #000;
+		color: #fff;
+		text-align: center;
+		font-size: 0.8em;
+		line-height: 1em;
+		text-transform: uppercase;
+		letter-spacing: 1px; 
+		font-weight: bold;
+		outline-offset: 6px;
+		outline: thin dotted transparent;
+	}
+
+	#mobile-menu-toggle:hover,
+	#mobile-menu-toggle:focus {
+		color: #3670A9;
+		border: 2px solid #3670A9;
+		transition: all 1.1s ease;
+	}
+
+	#mobile-menu-toggle:focus {
+		outline-color: #fff;
+	}
+
+	.main-navigation {
+		text-align: center;
+		padding-top: 13px;
+		padding-bottom: 9px;
+	}
+
+	.main-navigation ul {
+		display: none;
+	}
+
+	.main-navigation.toggled ul {
+		display: block;
+	}
+
+ 	.main-navigation.toggled .children,
+	.main-navigation.toggled .sub-menu {
+		display: none;
+	}
+
+	.main-navigation ul {
+		margin-top: 1em;
+		width: 100%;
+		border-top:1px solid #eee;
+	}
+
+	.main-navigation li {
+		padding: 14px 14px 14px 2em;
+		display: inline-block;
+		width: 100%;
+		background: #fff;
+		border-bottom: 1px solid #eee;
+		box-sizing: border-box;
+	}
+
+	.main-navigation .menu-item-has-children a {
+    	margin-left: 0;
+    }
+
+	.main-navigation ul li:hover {
+		box-shadow: inset 0 0 150px rgba(0,0,0, 0.01);
+		background: #fff;
+		transition: all 1.1s ease;
+	}
+
+}
+
+
+@media (max-width: 1064px){
+	.meta hr{width:35%;}
+}
+
+@media (max-width: 782px){
+	#action{
+		width:80%; 
+		margin:1em auto 0 auto;
+	}
+	
+	.site-title{font-size:4em; margin:1em 0 0 0;}
+
+	#footer,
+	.post, 
+	.type-page,
+	.type-attachment,
+	.sticky, 
+	.footer_widget_1, 
+	.footer_widget_2, 
+	.footer_widget_3{
+		width:95%;
+	}
+
+}

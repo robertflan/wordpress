@@ -1,0 +1,411 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lovebond Lite v1.0.0\n"
+"POT-Creation-Date: 2016-04-07 11:24+0530\n"
+"PO-Revision-Date: 2015-11-23 17:47+0530\n"
+"Last-Translator: \n"
+"Language-Team: SketchThemes <info@sketchthemes.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _;__;_e;_x;gettext;gettext_noop\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:21 includes/breadcrumb-section.php:47
+msgid "404"
+msgstr ""
+
+#: 404.php:24
+msgid "the page you are looking for doesn't exist"
+msgstr ""
+
+#: 404.php:32 content-none.php:26
+msgid "Back"
+msgstr ""
+
+#: 404.php:36 content-none.php:30
+msgid "Take me at home"
+msgstr ""
+
+#: SketchBoard/functions/sketch-breadcrumb.php:23
+#: includes/breadcrumb-section.php:41 includes/breadcrumb-section.php:45
+msgid "Home"
+msgstr ""
+
+#: SketchBoard/functions/sketch-breadcrumb.php:151
+msgid "Author : %"
+msgstr ""
+
+#: SketchBoard/functions/sketch-breadcrumb.php:159
+#, php-format
+msgid "Tag : %s"
+msgstr ""
+
+#: SketchBoard/functions/sketch-breadcrumb.php:167
+#: includes/breadcrumb-section.php:32
+msgid "Search"
+msgstr ""
+
+#: SketchBoard/functions/sketch-breadcrumb.php:171
+msgid "Error 404"
+msgstr ""
+
+#: archive.php:30 author.php:27 category.php:27 home.php:28 index.php:28
+#: search.php:32 tag.php:27
+msgid " previous"
+msgstr ""
+
+#: archive.php:31 author.php:28 category.php:28 home.php:29 index.php:29
+#: search.php:33 tag.php:28
+msgid "next "
+msgstr ""
+
+#: archive.php:35
+msgid "Apologies, but no results were found for this archive."
+msgstr ""
+
+#: author.php:32
+msgid "Apologies, but no results were found for this author."
+msgstr ""
+
+#: category.php:32
+msgid "Apologies, but no results were found for this category."
+msgstr ""
+
+#: comments.php:25
+msgid "comments"
+msgstr ""
+
+#: comments.php:49
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:70
+msgid "Name"
+msgstr ""
+
+#: comments.php:72
+msgid "E-mail"
+msgstr ""
+
+#: comments.php:74
+msgid "Phone"
+msgstr ""
+
+#: comments.php:76
+msgid "Subject"
+msgstr ""
+
+#: comments.php:79
+msgid "Message"
+msgstr ""
+
+#: comments.php:83
+msgid "Submit"
+msgstr ""
+
+#: content-none.php:15 includes/front-editor-content.php:73
+msgid "No Post Found"
+msgstr ""
+
+#: content-none.php:18
+msgid "Create a new post or search existing..."
+msgstr ""
+
+#: content.php:38 includes/front-editor-content.php:68
+msgid "Continue to read"
+msgstr ""
+
+#: content.php:42 includes/breadcrumb-section.php:26
+#: includes/front-editor-content.php:61 single.php:50
+msgid "Author"
+msgstr ""
+
+#: content.php:43 includes/front-editor-content.php:60 single.php:51
+msgid "Comments"
+msgstr ""
+
+#: content.php:43 includes/front-editor-content.php:60
+msgid "Comments Off "
+msgstr ""
+
+#: content.php:44 includes/front-editor-content.php:59 single.php:52
+msgid "Date"
+msgstr ""
+
+#: footer.php:39
+#, php-format
+msgid "Lovebond Theme By %s | %s"
+msgstr ""
+
+#: footer.php:39 includes/customizer.php:223
+msgid "Proudly Powered by WordPress"
+msgstr ""
+
+#: functions.php:29
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:100
+msgid "Main Navigation"
+msgstr ""
+
+#: functions.php:133
+msgid "Untitled"
+msgstr ""
+
+#: includes/breadcrumb-section.php:18
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr ""
+
+#: includes/breadcrumb-section.php:20
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr ""
+
+#: includes/breadcrumb-section.php:22
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr ""
+
+#: includes/breadcrumb-section.php:24 includes/breadcrumb-section.php:43
+#: includes/customizer.php:211
+msgid "Blog"
+msgstr ""
+
+#: includes/breadcrumb-section.php:28
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: includes/breadcrumb-section.php:30
+#, php-format
+msgid "Tag Archives : %s"
+msgstr ""
+
+#: includes/customizer.php:11
+msgid "Static Front Page Options"
+msgstr ""
+
+#: includes/customizer.php:12
+msgid ""
+"First Select \"Static Front Page -> Front page displays\" to \"A static page"
+"\""
+msgstr ""
+
+#: includes/customizer.php:21
+msgid "First Landing Section"
+msgstr ""
+
+#: includes/customizer.php:25
+msgid "Second Landing Section"
+msgstr ""
+
+#: includes/customizer.php:29
+msgid "Third Landing Section"
+msgstr ""
+
+#: includes/customizer.php:33
+msgid "Blog Section"
+msgstr ""
+
+#: includes/customizer.php:39
+msgid "Social Links"
+msgstr ""
+
+#: includes/customizer.php:44
+msgid "Footer Settings"
+msgstr ""
+
+#: includes/customizer.php:55
+msgid "Color Scheme"
+msgstr ""
+
+#: includes/customizer.php:68
+msgid "Logo Image"
+msgstr ""
+
+#: includes/customizer.php:79
+msgid "Facebook Link"
+msgstr ""
+
+#: includes/customizer.php:88
+msgid "Twitter Link"
+msgstr ""
+
+#: includes/customizer.php:96
+msgid "Google Plus Link"
+msgstr ""
+
+#: includes/customizer.php:112
+msgid "Home Blog Section ON/OFF"
+msgstr ""
+
+#: includes/customizer.php:122 includes/front-editor-content.php:36
+#: includes/front-editor-content.php:38
+msgid "Recent Blog"
+msgstr ""
+
+#: includes/customizer.php:126
+msgid "Home Blog Section Title"
+msgstr ""
+
+#: includes/customizer.php:135
+msgid "Number Of Blogs"
+msgstr ""
+
+#: includes/customizer.php:141 includes/customizer.php:305
+msgid "Select Page"
+msgstr ""
+
+#: includes/customizer.php:154
+msgid "Select page for first landing section."
+msgstr ""
+
+#: includes/customizer.php:158 includes/customizer.php:178
+#: includes/customizer.php:198
+msgid "Write small description here..."
+msgstr ""
+
+#: includes/customizer.php:162
+msgid "Home First Section Description"
+msgstr ""
+
+#: includes/customizer.php:163
+msgid "Enter content for Home First Section"
+msgstr ""
+
+#: includes/customizer.php:174
+msgid "Select page for second landing section."
+msgstr ""
+
+#: includes/customizer.php:182
+msgid "Home Second Section Description"
+msgstr ""
+
+#: includes/customizer.php:183
+msgid "Enter content for Home Second Section"
+msgstr ""
+
+#: includes/customizer.php:194
+msgid "Select page for third landing section."
+msgstr ""
+
+#: includes/customizer.php:202
+msgid "Home Third Section Description"
+msgstr ""
+
+#: includes/customizer.php:203
+msgid "Enter content for Home Third Section"
+msgstr ""
+
+#: includes/customizer.php:215
+msgid "Posts Page Heading"
+msgstr ""
+
+#: includes/customizer.php:227
+msgid "Copyright Text"
+msgstr ""
+
+#: includes/customizer.php:254
+msgid "No Repeat"
+msgstr ""
+
+#: includes/customizer.php:255
+msgid "Tile"
+msgstr ""
+
+#: includes/customizer.php:256
+msgid "Tile Horizontally"
+msgstr ""
+
+#: includes/customizer.php:257
+msgid "Tile Vertically"
+msgstr ""
+
+#: includes/customizer.php:269
+msgid "Left"
+msgstr ""
+
+#: includes/customizer.php:270
+msgid "Center"
+msgstr ""
+
+#: includes/customizer.php:271
+msgid "Right"
+msgstr ""
+
+#: includes/customizer.php:283
+msgid "Scroll"
+msgstr ""
+
+#: includes/customizer.php:284
+msgid "Fixed"
+msgstr ""
+
+#: includes/front-editor-content.php:78
+msgid "View All Blog"
+msgstr ""
+
+#: page.php:30
+msgid "Pages: "
+msgstr ""
+
+#: page.php:30 single.php:46
+msgid "number"
+msgstr ""
+
+#: page.php:36
+msgid "Apologies, No page found."
+msgstr ""
+
+#: page.php:48
+msgid "Edit"
+msgstr ""
+
+#: search.php:19
+msgid "You are searching for..."
+msgstr ""
+
+#: search.php:37
+msgid "Apologies, but no results were found for the requested search."
+msgstr ""
+
+#: single.php:46
+msgid "Pages :"
+msgstr ""
+
+#: single.php:58
+msgid "Not Found"
+msgstr ""
+
+#: single.php:64
+msgid "<i class=\"icon wedding-maids-left-arrow\"></i> %link"
+msgstr ""
+
+#: single.php:65
+msgid "%link <i class=\"icon wedding-maids-right-arrow\"></i>"
+msgstr ""
+
+#: single.php:72
+msgid "categories & tags"
+msgstr ""
+
+#: single.php:76
+msgid "In "
+msgstr ""
+
+#: single.php:77
+msgid "By "
+msgstr ""
+
+#: tag.php:32
+msgid "Apologies, but no results were found for this tag."
+msgstr ""

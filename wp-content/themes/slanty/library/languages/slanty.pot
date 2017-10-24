@@ -1,0 +1,123 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: comments.php:14
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr ""
+#: comments.php:122
+msgid "&larr; Older Comments"
+msgstr ""
+#: comments.php:14
+msgid "Comments are closed."
+msgstr ""
+
+#: content-excerpt.php:13
+#: content.php:15
+#: single.php:32
+msgid "Edit"
+msgstr ""
+
+#: content-none.php:8
+msgid "Nothing found"
+msgstr ""
+#: content-none.php:10
+msgid "No results were found. Please try again."
+msgstr ""
+
+#: functions.php:41
+msgid "Main Primary Navigation"
+msgstr ""
+#: functions.php:106
+msgid "Primary Footer Widget Area"
+msgstr ""
+#: functions.php:108
+msgid "The main widget area"
+msgstr ""
+#: functions.php:143
+msgid "Page %s"
+msgstr ""
+#: functions.php:150
+msgid "Read Article: "
+msgstr ""
+
+#: header.php:23
+msgid "Skip to content"
+msgid "Skip to content"
+msgstr ""
+msgstr ""
+
+#: page-nav.php:3
+msgid "More Pages"
+msgstr ""
+
+#: single.php:29
+msgid "Filed under: "
+msgstr ""
+#: single.php:30
+msgid "Search "
+msgstr ""
+
+#: theme-options.php:39
+msgid "Social Media"
+msgstr ""
+#: theme-options.php:43
+msgid "Fonts Selection"
+msgstr ""
+#: theme-options.php:44
+msgid "Dropdown List of Fonts for Theme"
+msgstr ""
+#: theme-options.php:48
+msgid "Content Control"
+msgstr ""
+#: theme-options.php:61
+msgid "Text for Social section"
+msgstr ""
+#: theme-options.php:62
+msgid "Insert text to display at top of social links"
+msgstr ""
+#: theme-options.php:75
+msgid "Facebook"
+msgstr ""
+#: theme-options.php:88
+msgid "Twitter"
+msgstr ""
+#: theme-options.php:101
+msgid "Google Plus"
+msgstr ""
+#: theme-options.php:114
+msgid "Your Custom Social Link"
+msgstr ""
+#: theme-options.php:129
+msgid "Select Custom Icon"
+msgstr ""
+#: theme-options.php:160
+msgid "Font Selections"
+msgstr ""
+#: theme-options.php:187
+msgid "Links Color"
+msgstr ""
+
+#: theme-options.php:200
+msgid "Content Background Color"
+msgstr ""
+#: theme-options.php:213
+msgid "Content Text Color"
+msgstr ""
+#: theme-options.php:226
+msgid "Show Header Image on Pages?"
+msgstr ""
+#: theme-options.php:227
+msgid "Check box to show header image on posts."
+msgstr ""
+#: theme-options.php:240
+msgid "Show excerpt only?"
+msgstr ""
+#: theme-options.php:241
+msgid "Check box to force showing excerpt only, on blog page (even if set in Admin)."
+msgstr ""

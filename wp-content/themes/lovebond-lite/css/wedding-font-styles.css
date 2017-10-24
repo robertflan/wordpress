@@ -1,0 +1,25 @@
+@charset "UTF-8";@font-face{font-family:"wedding-fonts";src:url("../fonts/wedding-fonts.eot");src:url("../fonts/wedding-fonts.eot?#iefix") format("embedded-opentype"),
+url("../fonts/wedding-fonts.woff") format("woff"),
+url("../fonts/wedding-fonts.ttf") format("truetype"),
+url("../fonts/wedding-fonts.svg#wedding-fonts") format("svg");font-weight:normal;font-style:normal;}
+[data-icon]:before{font-family:"wedding-fonts" !important;content:attr(data-icon);font-style:normal !important;font-weight:normal !important;font-variant:normal !important;text-transform:none !important;speak:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+[class^="wedding-"]:before,
+[class*=" wedding-"]:before{font-family:"wedding-fonts" !important;font-style:normal !important;font-weight:normal !important;font-variant:normal !important;text-transform:none !important;speak:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.wedding-blog:before{content:"\e000";}
+.wedding-gift:before{content:"\e001";}
+.wedding-maids-right-arrow:before{content:"\e002";}
+.wedding-paper-plane-button:before{content:"\e003";}
+.wedding-baloons:before{content:"\e004";}
+.wedding-calender:before{content:"\e005";}
+.wedding-camera:before{content:"\e006";}
+.wedding-counter:before{content:"\e007";}
+.wedding-gallery:before{content:"\e008";}
+.wedding-left-slider-arrow:before{content:"\e009";}
+.wedding-maids-left-arrow:before{content:"\e00a";}
+.wedding-picture:before{content:"\e00b";}
+.wedding-quots:before{content:"\e00c";}
+.wedding-right-slider-arrow:before{content:"\e00d";}
+.wedding-video-camera:before{content:"\e00e";}
+.wedding-video-play-icon:before{content:"\e00f";}
+.wedding-comment-load:before{content:"\e010";}
+.wedding-gallery-search:before{content:"\e011";}

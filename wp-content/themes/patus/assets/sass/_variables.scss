@@ -1,0 +1,74 @@
+// main: style.scss
+
+// SASS Variables and Mixins
+// Variables
+//--------------------------------------------------------
+
+// Default Color:
+$white: 		#FFFFFF;
+$dark: 			#222222;
+$text: 			#474747;
+$primary: 		#41b7d8;
+$secondary: 	#f55d2d;
+$hover:			#41b7d8;
+$border:		#eaeaea;
+$meta:			#999999;
+
+// Fonts
+$font_text:      	 "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font_heading:       "Dosis", Helvetica, Arial, sans-serif;
+$monaco: 			 Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+
+// Screen
+$phone: 		500px;
+$table: 		790px;
+$small_desktop:	1100px;
+
+//Grid
+$width:			1018px;
+$grid:			978px;
+$column: 		54px;
+$gutter: 		30px;
+
+//Baseline
+$base: 			20px;
+
+// Mixins
+//--------------------------------------------------------
+
+@mixin border-radius($radius: 2px) {
+	-webkit-border-radius: $radius;
+		 -moz-border-radius: $radius;
+			  border-radius: $radius;
+}
+
+@mixin for($media) {
+	@if $media == small-screens {
+		@media screen and (min-width: $phone) { @content; }
+	}
+	@else if $media == medium-screens {
+		@media screen and (min-width: $table) { @content; }
+	}
+	@else if $media == large-screens {
+		@media screen and (min-width: $small_desktop) { @content; }
+	}
+}
+
+$baseline-px: 10px;
+@mixin rem($property, $px-values) {
+
+	$baseline-rem: $baseline-px / 1rem;
+
+	#{$property}: $px-values;
+
+	@if type-of($px-values) == "number" {
+		#{$property}: $px-values / $baseline-rem; }
+	@else {
+		$rem-values: unquote("");
+		@each $value in $px-values {
+			@if $value == 0 {
+				$rem-values: append($rem-values, $value); }
+			@else {
+				$rem-values: append($rem-values, $value / $baseline-rem); } }
+		#{$property}: $rem-values; }
+}

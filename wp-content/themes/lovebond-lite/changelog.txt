@@ -1,0 +1,29 @@
+= 1.0.5 =
+* WP 4.6 compatible.
+* Updated font-awesome icons.
+* Removed unused css.
+* Fix translation issues.
+* Added social links.
+
+= 1.0.4 =
+* Changed header image.
+
+= 1.0.3 =
+* Removed view all blog link option and set to blog page.
+* Removed some unused content.
+
+= 1.0.2 =
+* Fixed mobile navigation issue.
+* Fixed breadcrumb php issue.
+* Removed unnecessary content and link.
+
+= 1.0.1 =
+* Fixed Theme URI issue.
+* Fixed default layout and demo content issue.
+* Fixed some translation issues.
+* Fixed some design issues.
+
+= 1.0.0 =
+* Released: November 24, 2015
+
+Initial release

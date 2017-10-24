@@ -1,0 +1,380 @@
+// main: style.scss
+/*------------------------------
+	4.1 Header
+------------------------------*/
+.site-header {
+	@include rem( 'margin-bottom', $base*2 );
+}
+
+.site-branding {
+	@include rem('padding', $base 0);
+}
+
+#title-are {
+	@include rem( 'margin', 0 0 $base*2 );
+}
+
+.site-branding .site-title{
+	@include rem( 'font-size', 37px );
+	margin: 0px;
+	line-height: 1.15;
+	margin-top: -3px;
+}
+
+.site-branding .site-title a {
+	font-family: $font_heading;
+	color: #000;
+	text-decoration: none;
+}
+
+.site-description {
+	text-transform: uppercase;
+	@include rem( 'margin', 5px 0 0 );
+	@include rem( 'font-size', 12px );
+	letter-spacing: 1px;
+}
+
+/* Navigation
+------------------------------*/
+
+@include for(medium-screens) {
+	.menu-toggle {
+    	display: none;
+	}
+}
+.menu-toggle {
+    @include rem( 'padding', 16px 0 );
+    @include rem( 'font-size', 14px );
+    @include rem( 'margin', 0px );
+    margin-top: 1px;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    line-height: 1;
+    span {
+    	font-size: 22px;
+    }
+}
+#site-navigation.main-navigation.toggled .menu-toggle span {
+	color: $secondary;
+}
+
+#site-navigation.main-navigation.toggled {
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+	.menu, .nav-menu {
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+		display: block;
+		position: absolute;
+		top: 62px;
+		left: 0px;
+		width: 100%;
+		background: #FFFFFF;
+		@include rem('padding-left', 20px);
+		@include rem('padding-bottom', 20px);
+		a {
+			@include rem('padding', 9px 0);
+		}
+		ul{
+			border: none;
+		}
+	}
+}
+
+#site-navigation {
+	background: url('assets/images/line_colored.png') repeat-x top left;
+	padding-top: 5px;
+	border-bottom: 1px solid #e2e2e2;
+	.menu, .nav-menu {
+		display: none;
+		@include for(medium-screens) {
+			display: inline;
+		}
+		margin: 0;
+		padding: 0;
+		ul {
+			margin-left: 0px;
+		}
+		ul ul {
+			margin-top: -1px;
+		}
+		ul.sub-menu li a, ul.sub-menu ul li a,
+		ul.children li a, ul.children ul li a {
+			min-width: 100%;
+			@include rem( 'font-size', 15px );
+			@include rem('padding', $base/2 $gutter/1.3);
+			@include for(medium-screens) {
+				min-width: 200px;
+				max-width: 250px;
+				border-bottom: 1px solid #e2e2e2;
+				&:hover, &:focus {
+					color: $secondary;
+				}
+			}
+		}
+		ul li:last-child a, ul li li:last-child a{
+			border-bottom: none;
+		}
+		li {
+			@include for(medium-screens){
+				display: inline-block;
+				position: relative;
+			}
+			list-style: none;
+			margin: 0;
+			text-align: left;
+			&:first-child a{
+				padding-left: 0px;
+			}
+			a {
+				font-weight: normal;
+				text-decoration: none;
+				display: block;
+				color: #7e7e75;
+				line-height: 1.7;
+				font-family: $font_heading;
+				text-transform: uppercase;
+				@include rem( 'font-size', 16px );
+				@include rem( 'padding', $base/1.5 0 );
+				@include for(medium-screens) {
+					@include rem('padding', $base/1.5 $gutter/1.3);
+				}
+				&:hover {
+					color: $secondary;
+				}
+				@include for(medium-screens) {
+					&:hover {
+						color: $secondary;
+					}
+				}
+			}
+		}
+		li.current-menu-item a,
+		li.current_page_item a{
+			color: $secondary;
+		}
+		@include for(medium-screens){
+			li.current-menu-item a,
+			li.current_page_item a{
+				color: $secondary;
+			}
+		}
+		@include for(medium-screens){
+			li.menu-item-has-children > a:after,
+			li.page_item_has_children > a:after {
+				border-color: $meta transparent transparent;
+			    border-style: solid;
+			    border-width: 4px;
+			    content: "";
+			    height: 0;
+			    margin-top: -1px;
+			    position: absolute;
+			    @include rem( 'right', $gutter/2 );
+			    top: 50%;
+			    width: 0;
+			}
+			li.menu-item-has-children > a,
+			li.page_item_has_children > a {
+				@include rem( 'padding-right', $gutter );
+			}
+			li li.menu-item-has-children > a:after,
+			li li.page_item_has_children > a:after {
+				border-color: transparent transparent transparent $meta;
+				top: 45%;
+			}
+		}
+		.sub-menu, .children {
+			padding: 0px;
+			margin: 0px;
+			border: 1px solid #e2e2e2;
+			background: #FFFFFF;
+			li a {
+				@include rem( 'padding-left', $gutter );
+				&:before {
+					content: "- ";
+				}
+			}
+			li li a {
+				@include rem( 'padding-left', $gutter*2 );
+			}
+			@include for(medium-screens) {
+				li a {
+					@include rem( 'padding-left', $gutter/2 );
+					&:before {
+						content: "";
+					}
+				}
+				li li a {
+					@include rem( 'padding-left', $gutter );
+				}
+			}
+		}
+		@include for(medium-screens) {
+			.sub-menu, .children {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+				overflow: hidden;
+				z-index: 9999;
+				ul {
+					top: 0;
+					left: 100%;
+				}
+				a{
+					@include rem( 'padding-left', $gutter/2 );
+				}
+			}
+		}
+		@include for(medium-screens) {
+			li:hover > ul.sub-menu,
+			li:hover > ul.children,
+			li:hover > ul,
+			li li:hover > ul {
+				clip: inherit;
+				overflow: inherit;
+				height: inherit;
+				width: inherit;
+			}
+		}
+	}
+}
+
+#site-navigation .container {
+	position: relative;
+}
+
+.nav-social {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	li {
+		list-style: none;
+		display: inline-block;
+		a {
+			text-decoration: none;
+			@include rem('margin-left', 3px);
+
+			span {
+				@include rem('font-size', 17px);
+				@include rem('padding', 6px);
+				background: #bab8ae;
+				line-height: 1;
+				color: #FFFFFF;
+				@include border-radius(100px);
+				&:hover {
+					background: #8b8879;
+				}
+			}
+		}
+	}
+}
+
+/*------------------------------
+	4.2 Main
+------------------------------*/
+
+/* Content
+------------------------------*/
+.post {
+	@include rem( 'padding-bottom', $base );
+	@include rem( 'margin-bottom', $base*1.5 );
+	border-bottom: 1px solid $border;
+}
+
+.more-link {
+	color: $secondary;
+	text-decoration: none;
+	font-weight: bold;
+	&:hover {
+		text-decoration: underline;
+		color: $secondary;
+	}
+}
+
+.singular .post {
+	@include rem( 'margin-bottom', $base*2 );
+}
+
+.loop-pagination {
+	display: inline-block;
+	@include rem('margin-top', 20px);
+	a, span {
+		@include rem( 'padding', 6px 13px 7px );
+		background: $meta;
+		color: $white !important;
+		@include border-radius( 2px );
+		text-decoration: none;
+		&:hover{
+			background: $secondary;
+		}
+	}
+	a.current, span.current {
+		background: $secondary;
+	}
+}
+
+.page-header {
+	@include rem( 'margin-bottom', $base*2 );
+	.page-title {
+		margin-top: 0px;
+		@include rem( 'font-size', 24px );
+		font-weight: normal;
+	}
+}
+
+/* Page & Archive Title */
+.page-header .page-title {
+	@include rem('font-size', 25px);
+	@include rem('margin-bottom', 30px);
+	@include rem('padding-bottom', 40px);
+	border-bottom: 1px solid $border;
+	text-transform: uppercase;
+}
+
+
+/* Sidebar
+------------------------------*/
+
+/* Search Box */
+#searchform {
+	margin: 0;
+}
+
+.search-field {
+	background: url('assets/images/search-icon.png') no-repeat scroll right center #ffffff;
+	outline: none;
+	padding: 10px 12% 10px 0 !important;
+	text-indent: 6%;
+	@include rem('font-size', 11px);
+	width: 87%;
+	border: 1px solid #e2e2e2 !important;
+	color: #919599;
+}
+
+.search-submit {
+	display: none;
+}
+
+/*------------------------------
+	4.3 Footer
+------------------------------*/
+.site-footer {
+	@include rem('padding', $base*2 0);
+	background: url('assets/images/line_colored.png') repeat-x top left;
+}
+
+.site-info {
+	@include rem('margin-bottom', 15px);
+}
+
+@include for(medium-screens){
+	.site-info {
+		float: left;
+		margin-bottom: 0;
+	}
+
+	.footer-social {
+		float: right;
+	}
+}
